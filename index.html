@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lead AI Engineer with 5+ years of experience in Artificial Intelligence, Machine Learning, Full-Stack Development, Robotics, and Cloud Technologies." />
+  <title>Sreehari Preman | Lead AI Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['"DM Serif Display"', 'Georgia', 'serif'],
+          },
+          colors: {
+            surface: {
+              DEFAULT: '#0a0f1a',
+              raised: '#111827',
+              border: '#1e293b',
+            },
+            accent: {
+              DEFAULT: '#38bdf8',
+              muted: '#0ea5e9',
+              glow: '#7dd3fc',
+            },
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-surface text-slate-300 font-sans antialiased overflow-x-hidden">
+
+  <!-- Background decoration -->
+  <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none" aria-hidden="true">
+    <div class="hero-glow absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] rounded-full bg-accent/10 blur-[120px]"></div>
+    <div class="hero-glow-secondary absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-indigo-500/10 blur-[100px]"></div>
+    <div class="grid-pattern absolute inset-0 opacity-[0.03]"></div>
+  </div>
+
+  <!-- Navigation -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <nav class="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between" aria-label="Main navigation">
+      <a href="#hero" class="text-sm font-semibold tracking-wide text-white hover:text-accent transition-colors" aria-label="Go to top">
+        SP
+      </a>
+      <ul class="hidden sm:flex items-center gap-8 text-sm font-medium text-slate-400">
+        <li><a href="#about" class="nav-link hover:text-white transition-colors">About</a></li>
+        <li><a href="#tech-stack" class="nav-link hover:text-white transition-colors">Tech Stack</a></li>
+        <li><a href="#contact" class="nav-link hover:text-white transition-colors">Contact</a></li>
+      </ul>
+      <button
+        id="menu-toggle"
+        class="sm:hidden p-2 text-slate-400 hover:text-white transition-colors"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg id="menu-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="menu-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="sm:hidden hidden border-t border-surface-border bg-surface/95 backdrop-blur-md">
+      <ul class="max-w-5xl mx-auto px-6 py-4 flex flex-col gap-4 text-sm font-medium text-slate-400">
+        <li><a href="#about" class="mobile-nav-link block py-1 hover:text-white transition-colors">About</a></li>
+        <li><a href="#tech-stack" class="mobile-nav-link block py-1 hover:text-white transition-colors">Tech Stack</a></li>
+        <li><a href="#contact" class="mobile-nav-link block py-1 hover:text-white transition-colors">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section id="hero" class="min-h-screen flex items-center justify-center px-6 pt-20">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="reveal hero-name font-display text-5xl sm:text-6xl md:text-7xl font-normal tracking-tight mb-4">
+          Sreehari Preman
+        </h1>
+        <p class="reveal reveal-delay-1 text-xl sm:text-2xl font-medium text-slate-400 mb-6">
+          Lead AI Engineer
+        </p>
+        <div class="reveal reveal-delay-2 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-sm text-slate-500 mb-12">
+          <span class="tag-pill">AI</span>
+          <span class="text-surface-border" aria-hidden="true">•</span>
+          <span class="tag-pill">Backend Engineering</span>
+          <span class="text-surface-border" aria-hidden="true">•</span>
+          <span class="tag-pill">Frontend Development</span>
+          <span class="text-surface-border" aria-hidden="true">•</span>
+          <span class="tag-pill">Robotics Development</span>
+          <span class="text-surface-border" aria-hidden="true">•</span>
+          <span class="tag-pill">3D Printing</span>
+        </div>
+        <div class="reveal reveal-delay-3 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="#contact"
+            class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-surface font-semibold text-sm hover:bg-accent-glow transition-all duration-300 hover:shadow-lg hover:shadow-accent/20"
+          >
+            Get in Touch
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+          <a
+            href="#tech-stack"
+            class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-surface-border text-slate-300 font-medium text-sm hover:border-accent/50 hover:text-white transition-all duration-300"
+          >
+            View Tech Stack
+          </a>
+        </div>
+        <div class="reveal reveal-delay-4 mt-20 animate-bounce-slow" aria-hidden="true">
+          <a href="#about" class="inline-block text-slate-600 hover:text-accent transition-colors">
+            <svg class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-24 px-6">
+      <div class="max-w-3xl mx-auto">
+        <div class="reveal section-header mb-12">
+          <span class="text-xs font-semibold tracking-widest uppercase text-accent mb-3 block">About</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white">Building intelligent systems at scale</h2>
+        </div>
+        <div class="reveal reveal-delay-1 space-y-5 text-slate-400 leading-relaxed text-base sm:text-lg">
+          <p>
+            I am a Lead AI Engineer with 5+ years of experience designing and building production-grade software solutions across Artificial Intelligence, Machine Learning, Backend Engineering, Frontend Development, Robotics Development, 3D Printing, Data Engineering, and Cloud Technologies.
+          </p>
+          <p>
+            I have worked on end-to-end product development, from system architecture and API design to user interfaces, machine learning models, deployment, and production operations.
+          </p>
+          <p>
+            My experience spans AI applications, computer vision systems, natural language processing, large language models, robotics development, 3D printing, analytics platforms, web applications, and enterprise software solutions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section id="tech-stack" class="py-24 px-6">
+      <div class="max-w-5xl mx-auto">
+        <div class="reveal section-header mb-14 text-center">
+          <span class="text-xs font-semibold tracking-widest uppercase text-accent mb-3 block">Tech Stack</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white">Tools &amp; Technologies</h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+          <div class="reveal tech-card group">
+            <div class="tech-card-inner">
+              <div class="flex items-center gap-3 mb-5">
+                <div class="tech-icon bg-violet-500/10 text-violet-400">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 class="text-base font-semibold text-white">Artificial Intelligence</h3>
+              </div>
+              <ul class="flex flex-wrap gap-2">
+                <li class="skill-tag">Machine Learning</li>
+                <li class="skill-tag">Deep Learning</li>
+                <li class="skill-tag">Computer Vision</li>
+                <li class="skill-tag">NLP</li>
+                <li class="skill-tag">LLMs</li>
+                <li class="skill-tag">RAG</li>
+                <li class="skill-tag">AI Agents</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="reveal reveal-delay-1 tech-card group">
+            <div class="tech-card-inner">
+              <div class="flex items-center gap-3 mb-5">
+                <div class="tech-icon bg-emerald-500/10 text-emerald-400">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" />
+                  </svg>
+                </div>
+                <h3 class="text-base font-semibold text-white">Backend</h3>
+              </div>
+              <ul class="flex flex-wrap gap-2">
+                <li class="skill-tag">Python</li>
+                <li class="skill-tag">FastAPI</li>
+                <li class="skill-tag">Flask</li>
+                <li class="skill-tag">Django</li>
+                <li class="skill-tag">REST APIs</li>
+                <li class="skill-tag">PostgreSQL</li>
+                <li class="skill-tag">MySQL</li>
+                <li class="skill-tag">MongoDB</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="reveal reveal-delay-2 tech-card group">
+            <div class="tech-card-inner">
+              <div class="flex items-center gap-3 mb-5">
+                <div class="tech-icon bg-sky-500/10 text-sky-400">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  </svg>
+                </div>
+                <h3 class="text-base font-semibold text-white">Frontend</h3>
+              </div>
+              <ul class="flex flex-wrap gap-2">
+                <li class="skill-tag">React</li>
+                <li class="skill-tag">Next.js</li>
+                <li class="skill-tag">JavaScript</li>
+                <li class="skill-tag">TypeScript</li>
+                <li class="skill-tag">HTML</li>
+                <li class="skill-tag">CSS</li>
+                <li class="skill-tag">Tailwind CSS</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="reveal reveal-delay-1 tech-card group">
+            <div class="tech-card-inner">
+              <div class="flex items-center gap-3 mb-5">
+                <div class="tech-icon bg-amber-500/10 text-amber-400">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                </div>
+                <h3 class="text-base font-semibold text-white">Data &amp; Analytics</h3>
+              </div>
+              <ul class="flex flex-wrap gap-2">
+                <li class="skill-tag">Airbyte</li>
+                <li class="skill-tag">DBT</li>
+                <li class="skill-tag">Tableau</li>
+                <li class="skill-tag">Apache Superset</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="reveal reveal-delay-2 tech-card group">
+            <div class="tech-card-inner">
+              <div class="flex items-center gap-3 mb-5">
+                <div class="tech-icon bg-teal-500/10 text-teal-400">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
+                  </svg>
+                </div>
+                <h3 class="text-base font-semibold text-white">Hardware &amp; Robotics</h3>
+              </div>
+              <ul class="flex flex-wrap gap-2">
+                <li class="skill-tag">Robotics Development</li>
+                <li class="skill-tag">3D Printing</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="reveal reveal-delay-1 tech-card group">
+            <div class="tech-card-inner">
+              <div class="flex items-center gap-3 mb-5">
+                <div class="tech-icon bg-rose-500/10 text-rose-400">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <h3 class="text-base font-semibold text-white">Tools</h3>
+              </div>
+              <ul class="flex flex-wrap gap-2">
+                <li class="skill-tag">Git</li>
+                <li class="skill-tag">Docker</li>
+                <li class="skill-tag">Linux</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-24 px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <div class="reveal section-header mb-12">
+          <span class="text-xs font-semibold tracking-widest uppercase text-accent mb-3 block">Contact</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Let's connect</h2>
+        </div>
+        <div class="reveal reveal-delay-1 flex flex-col sm:flex-row items-center justify-center gap-5 mb-10">
+          <a
+            href="mailto:sreeharipreman853@gmail.com"
+            class="contact-card group w-full sm:w-auto"
+            aria-label="Send email to sreeharipreman853@gmail.com"
+          >
+            <span class="contact-icon" aria-hidden="true">📧</span>
+            <span class="text-left">
+              <span class="block text-xs text-slate-500 mb-0.5">Email</span>
+              <span class="block text-sm font-medium text-white group-hover:text-accent transition-colors">sreeharipreman853@gmail.com</span>
+            </span>
+          </a>
+          <div class="contact-card w-full sm:w-auto">
+            <span class="contact-icon" aria-hidden="true">📍</span>
+            <span class="text-left">
+              <span class="block text-xs text-slate-500 mb-0.5">Location</span>
+              <span class="block text-sm font-medium text-white">Kochi, Kerala, India</span>
+            </span>
+          </div>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <span class="text-xs font-semibold tracking-widest uppercase text-accent mb-5 block">Social Links</span>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="https://github.com/SreehariPreman"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link group"
+              aria-label="Visit GitHub profile"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+              </svg>
+              <span>GitHub</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/sreehari-k-/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link group"
+              aria-label="Visit LinkedIn profile"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section id="cta" class="px-6 pb-24">
+      <div class="reveal max-w-3xl mx-auto text-center cta-box">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">Interested in working together?</h2>
+        <p class="text-slate-400 text-base sm:text-lg mb-8 max-w-xl mx-auto">
+          Let's discuss AI, software, robotics, or product development.
+        </p>
+        <a
+          href="mailto:sreeharipreman853@gmail.com"
+          class="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-accent text-surface font-semibold text-sm hover:bg-accent-glow transition-all duration-300 hover:shadow-lg hover:shadow-accent/20"
+        >
+          Get In Touch
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-surface-border py-8 px-6">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-600">
+      <p>&copy; <span id="year"></span> Sreehari Preman. All rights reserved.</p>
+      <p class="text-xs">Lead AI Engineer</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
