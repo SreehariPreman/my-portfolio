@@ -19,14 +19,14 @@
           },
           colors: {
             surface: {
-              DEFAULT: '#f8fafc',
-              raised: '#ffffff',
-              border: '#e2e8f0',
+              DEFAULT: '#0a0f1a',
+              raised: '#111827',
+              border: '#1e293b',
             },
             accent: {
-              DEFAULT: '#0284c7',
-              muted: '#0369a1',
-              glow: '#0ea5e9',
+              DEFAULT: '#38bdf8',
+              muted: '#0ea5e9',
+              glow: '#7dd3fc',
             },
           },
         },
@@ -35,29 +35,29 @@
   </script>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body class="bg-surface text-slate-600 font-sans antialiased overflow-x-hidden">
+<body class="bg-surface text-slate-300 font-sans antialiased overflow-x-hidden">
 
   <!-- Background decoration -->
   <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none" aria-hidden="true">
-    <div class="hero-glow absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] rounded-full bg-sky-200/40 blur-[120px]"></div>
-    <div class="hero-glow-secondary absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-indigo-200/30 blur-[100px]"></div>
-    <div class="grid-pattern absolute inset-0 opacity-[0.4]"></div>
+    <div class="hero-glow absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] rounded-full bg-accent/10 blur-[120px]"></div>
+    <div class="hero-glow-secondary absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-indigo-500/10 blur-[100px]"></div>
+    <div class="grid-pattern absolute inset-0 opacity-[0.03]"></div>
   </div>
 
   <!-- Navigation -->
   <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
     <nav class="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between" aria-label="Main navigation">
-      <a href="#hero" class="text-sm font-semibold tracking-wide text-slate-900 hover:text-accent transition-colors" aria-label="Go to top">
+      <a href="#hero" class="text-sm font-semibold tracking-wide text-white hover:text-accent transition-colors" aria-label="Go to top">
         SP
       </a>
       <ul class="hidden sm:flex items-center gap-8 text-sm font-medium text-slate-400">
-        <li><a href="#about" class="nav-link hover:text-slate-900 transition-colors">About</a></li>
-        <li><a href="#tech-stack" class="nav-link hover:text-slate-900 transition-colors">Tech Stack</a></li>
-        <li><a href="#contact" class="nav-link hover:text-slate-900 transition-colors">Contact</a></li>
+        <li><a href="#about" class="nav-link hover:text-white transition-colors">About</a></li>
+        <li><a href="#tech-stack" class="nav-link hover:text-white transition-colors">Tech Stack</a></li>
+        <li><a href="#contact" class="nav-link hover:text-white transition-colors">Contact</a></li>
       </ul>
       <button
         id="menu-toggle"
-        class="sm:hidden p-2 text-slate-500 hover:text-slate-900 transition-colors"
+        class="sm:hidden p-2 text-slate-400 hover:text-white transition-colors"
         aria-label="Toggle menu"
         aria-expanded="false"
         aria-controls="mobile-menu"
@@ -70,11 +70,11 @@
         </svg>
       </button>
     </nav>
-    <div id="mobile-menu" class="sm:hidden hidden border-t border-surface-border bg-white/95 backdrop-blur-md shadow-sm">
-      <ul class="max-w-5xl mx-auto px-6 py-4 flex flex-col gap-4 text-sm font-medium text-slate-500">
-        <li><a href="#about" class="mobile-nav-link block py-1 hover:text-slate-900 transition-colors">About</a></li>
-        <li><a href="#tech-stack" class="mobile-nav-link block py-1 hover:text-slate-900 transition-colors">Tech Stack</a></li>
-        <li><a href="#contact" class="mobile-nav-link block py-1 hover:text-slate-900 transition-colors">Contact</a></li>
+    <div id="mobile-menu" class="sm:hidden hidden border-t border-surface-border bg-surface/95 backdrop-blur-md">
+      <ul class="max-w-5xl mx-auto px-6 py-4 flex flex-col gap-4 text-sm font-medium text-slate-400">
+        <li><a href="#about" class="mobile-nav-link block py-1 hover:text-white transition-colors">About</a></li>
+        <li><a href="#tech-stack" class="mobile-nav-link block py-1 hover:text-white transition-colors">Tech Stack</a></li>
+        <li><a href="#contact" class="mobile-nav-link block py-1 hover:text-white transition-colors">Contact</a></li>
       </ul>
     </div>
   </header>
@@ -87,7 +87,7 @@
         <h1 class="reveal hero-name font-display text-5xl sm:text-6xl md:text-7xl font-normal tracking-tight mb-4">
           Sreehari Preman
         </h1>
-        <p class="reveal reveal-delay-1 text-xl sm:text-2xl font-medium text-slate-600 mb-6">
+        <p class="reveal reveal-delay-1 text-xl sm:text-2xl font-medium text-slate-400 mb-6">
           Lead AI Engineer
         </p>
         <div class="reveal reveal-delay-2 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-sm text-slate-500 mb-12">
@@ -104,7 +104,7 @@
         <div class="reveal reveal-delay-3 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
             href="#contact"
-            class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-glow transition-all duration-300 hover:shadow-lg hover:shadow-accent/25"
+            class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-surface font-semibold text-sm hover:bg-accent-glow transition-all duration-300 hover:shadow-lg hover:shadow-accent/20"
           >
             Get in Touch
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -113,13 +113,13 @@
           </a>
           <a
             href="#tech-stack"
-            class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-surface-border bg-white text-slate-700 font-medium text-sm hover:border-accent/40 hover:text-slate-900 transition-all duration-300 shadow-sm"
+            class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-surface-border text-slate-300 font-medium text-sm hover:border-accent/50 hover:text-white transition-all duration-300"
           >
             View Tech Stack
           </a>
         </div>
         <div class="reveal reveal-delay-4 mt-20 animate-bounce-slow" aria-hidden="true">
-          <a href="#about" class="inline-block text-slate-400 hover:text-accent transition-colors">
+          <a href="#about" class="inline-block text-slate-600 hover:text-accent transition-colors">
             <svg class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
@@ -133,9 +133,9 @@
       <div class="max-w-3xl mx-auto">
         <div class="reveal section-header mb-12">
           <span class="text-xs font-semibold tracking-widest uppercase text-accent mb-3 block">About</span>
-          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">Building intelligent systems at scale</h2>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white">Building intelligent systems at scale</h2>
         </div>
-        <div class="reveal reveal-delay-1 space-y-5 text-slate-600 leading-relaxed text-base sm:text-lg">
+        <div class="reveal reveal-delay-1 space-y-5 text-slate-400 leading-relaxed text-base sm:text-lg">
           <p>
             I am a Lead AI Engineer with 5+ years of experience designing and building production-grade software solutions across Artificial Intelligence, Machine Learning, Backend Engineering, Frontend Development, Robotics Development, 3D Printing, Data Engineering, and Cloud Technologies.
           </p>
@@ -154,19 +154,19 @@
       <div class="max-w-5xl mx-auto">
         <div class="reveal section-header mb-14 text-center">
           <span class="text-xs font-semibold tracking-widest uppercase text-accent mb-3 block">Tech Stack</span>
-          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">Tools &amp; Technologies</h2>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white">Tools &amp; Technologies</h2>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
 
           <div class="reveal tech-card group">
             <div class="tech-card-inner">
               <div class="flex items-center gap-3 mb-5">
-                <div class="tech-icon bg-violet-100 text-violet-600">
+                <div class="tech-icon bg-violet-500/10 text-violet-400">
                   <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <h3 class="text-base font-semibold text-slate-900">Artificial Intelligence</h3>
+                <h3 class="text-base font-semibold text-white">Artificial Intelligence</h3>
               </div>
               <ul class="flex flex-wrap gap-2">
                 <li class="skill-tag">Machine Learning</li>
@@ -183,12 +183,12 @@
           <div class="reveal reveal-delay-1 tech-card group">
             <div class="tech-card-inner">
               <div class="flex items-center gap-3 mb-5">
-                <div class="tech-icon bg-emerald-100 text-emerald-600">
+                <div class="tech-icon bg-emerald-500/10 text-emerald-400">
                   <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" />
                   </svg>
                 </div>
-                <h3 class="text-base font-semibold text-slate-900">Backend</h3>
+                <h3 class="text-base font-semibold text-white">Backend</h3>
               </div>
               <ul class="flex flex-wrap gap-2">
                 <li class="skill-tag">Python</li>
@@ -206,12 +206,12 @@
           <div class="reveal reveal-delay-2 tech-card group">
             <div class="tech-card-inner">
               <div class="flex items-center gap-3 mb-5">
-                <div class="tech-icon bg-sky-100 text-sky-600">
+                <div class="tech-icon bg-sky-500/10 text-sky-400">
                   <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                   </svg>
                 </div>
-                <h3 class="text-base font-semibold text-slate-900">Frontend</h3>
+                <h3 class="text-base font-semibold text-white">Frontend</h3>
               </div>
               <ul class="flex flex-wrap gap-2">
                 <li class="skill-tag">React</li>
@@ -228,12 +228,12 @@
           <div class="reveal reveal-delay-1 tech-card group">
             <div class="tech-card-inner">
               <div class="flex items-center gap-3 mb-5">
-                <div class="tech-icon bg-amber-100 text-amber-600">
+                <div class="tech-icon bg-amber-500/10 text-amber-400">
                   <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
                 </div>
-                <h3 class="text-base font-semibold text-slate-900">Data &amp; Analytics</h3>
+                <h3 class="text-base font-semibold text-white">Data &amp; Analytics</h3>
               </div>
               <ul class="flex flex-wrap gap-2">
                 <li class="skill-tag">Airbyte</li>
@@ -247,12 +247,12 @@
           <div class="reveal reveal-delay-2 tech-card group">
             <div class="tech-card-inner">
               <div class="flex items-center gap-3 mb-5">
-                <div class="tech-icon bg-teal-100 text-teal-600">
+                <div class="tech-icon bg-teal-500/10 text-teal-400">
                   <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
                   </svg>
                 </div>
-                <h3 class="text-base font-semibold text-slate-900">Hardware &amp; Robotics</h3>
+                <h3 class="text-base font-semibold text-white">Hardware &amp; Robotics</h3>
               </div>
               <ul class="flex flex-wrap gap-2">
                 <li class="skill-tag">Robotics Development</li>
@@ -264,13 +264,13 @@
           <div class="reveal reveal-delay-1 tech-card group">
             <div class="tech-card-inner">
               <div class="flex items-center gap-3 mb-5">
-                <div class="tech-icon bg-rose-100 text-rose-600">
+                <div class="tech-icon bg-rose-500/10 text-rose-400">
                   <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
-                <h3 class="text-base font-semibold text-slate-900">Tools</h3>
+                <h3 class="text-base font-semibold text-white">Tools</h3>
               </div>
               <ul class="flex flex-wrap gap-2">
                 <li class="skill-tag">Git</li>
@@ -289,7 +289,7 @@
       <div class="max-w-3xl mx-auto text-center">
         <div class="reveal section-header mb-12">
           <span class="text-xs font-semibold tracking-widest uppercase text-accent mb-3 block">Contact</span>
-          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Let's connect</h2>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Let's connect</h2>
         </div>
         <div class="reveal reveal-delay-1 flex flex-col sm:flex-row items-center justify-center gap-5 mb-10">
           <a
@@ -300,14 +300,14 @@
             <span class="contact-icon" aria-hidden="true">📧</span>
             <span class="text-left">
               <span class="block text-xs text-slate-500 mb-0.5">Email</span>
-              <span class="block text-sm font-medium text-slate-900 group-hover:text-accent transition-colors">sreeharipreman853@gmail.com</span>
+              <span class="block text-sm font-medium text-white group-hover:text-accent transition-colors">sreeharipreman853@gmail.com</span>
             </span>
           </a>
           <div class="contact-card w-full sm:w-auto">
             <span class="contact-icon" aria-hidden="true">📍</span>
             <span class="text-left">
               <span class="block text-xs text-slate-500 mb-0.5">Location</span>
-              <span class="block text-sm font-medium text-slate-900">Kochi, Kerala, India</span>
+              <span class="block text-sm font-medium text-white">Kochi, Kerala, India</span>
             </span>
           </div>
         </div>
@@ -346,13 +346,13 @@
     <!-- Call to Action -->
     <section id="cta" class="px-6 pb-24">
       <div class="reveal max-w-3xl mx-auto text-center cta-box">
-        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">Interested in working together?</h2>
-        <p class="text-slate-600 text-base sm:text-lg mb-8 max-w-xl mx-auto">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">Interested in working together?</h2>
+        <p class="text-slate-400 text-base sm:text-lg mb-8 max-w-xl mx-auto">
           Let's discuss AI, software, robotics, or product development.
         </p>
         <a
           href="mailto:sreeharipreman853@gmail.com"
-          class="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-glow transition-all duration-300 hover:shadow-lg hover:shadow-accent/25"
+          class="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-accent text-surface font-semibold text-sm hover:bg-accent-glow transition-all duration-300 hover:shadow-lg hover:shadow-accent/20"
         >
           Get In Touch
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -364,8 +364,8 @@
 
   </main>
 
-  <footer class="border-t border-surface-border bg-white py-8 px-6">
-    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+  <footer class="border-t border-surface-border py-8 px-6">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-600">
       <p>&copy; <span id="year"></span> Sreehari Preman. All rights reserved.</p>
       <p class="text-xs">Lead AI Engineer</p>
     </div>
