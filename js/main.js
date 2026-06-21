@@ -104,8 +104,8 @@ document.querySelectorAll('.tech-card').forEach((card) => {
   card.addEventListener('mouseenter', () => {
     tags.forEach((tag, i) => {
       tag.style.transitionDelay = `${i * 30}ms`
-      tag.style.color = '#e2e8f0'
-      tag.style.borderColor = 'rgba(56, 189, 248, 0.25)'
+      tag.style.color = '#0f172a'
+      tag.style.borderColor = 'rgba(2, 132, 199, 0.3)'
     })
   })
 
