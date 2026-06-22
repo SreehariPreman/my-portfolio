@@ -34,3 +34,6 @@ Then visit [http://localhost:8080](http://localhost:8080).
 - Email: sreeharipreman853@gmail.com
 - GitHub: [SreehariPreman](https://github.com/SreehariPreman)
 - LinkedIn: [sreehari-k-](https://www.linkedin.com/in/sreehari-k-/)
+
+ssh root@198.199.90.169
+server password: 'K%z^;I|~K4D?Y6#2b`3s

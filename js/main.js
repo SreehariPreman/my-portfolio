@@ -5,7 +5,7 @@ const menuIconOpen = document.getElementById('menu-icon-open')
 const menuIconClose = document.getElementById('menu-icon-close')
 const yearEl = document.getElementById('year')
 
-const sections = ['about', 'tech-stack', 'contact']
+const sections = ['about', 'experience', 'projects', 'tech-stack', 'contact']
 const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link')
 
 /* Current year in footer */
@@ -98,7 +98,7 @@ sections.forEach((id) => {
 })
 
 /* Stagger skill tags on card hover */
-document.querySelectorAll('.tech-card').forEach((card) => {
+document.querySelectorAll('.tech-card, .project-card').forEach((card) => {
   const tags = card.querySelectorAll('.skill-tag')
 
   card.addEventListener('mouseenter', () => {
