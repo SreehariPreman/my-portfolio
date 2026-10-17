@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none" role="img" aria-label="AskMe SQL intelligence diagram">
   <defs>
     <linearGradient id="am-bg" x1="0" y1="0" x2="640" y2="360" gradientUnits="userSpaceOnUse">
@@ -13,8 +14,8 @@
   <text x="68" y="104" fill="#e2e8f0" font-family="system-ui,sans-serif" font-size="12">"What were Q3 sales by region?"</text>
   <path d="M268 96h40" stroke="url(#am-accent)" stroke-width="2"/>
   <rect x="308" y="44" width="124" height="104" rx="8" fill="#111827" stroke="url(#am-accent)" stroke-width="1.5"/>
-  <text x="370" y="72" text-anchor="middle" fill="#5eead4" font-family="system-ui,sans-serif" font-size="11" font-weight="600">NL ’ SQL</text>
-  <text x="370" y="90" text-anchor="middle" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="9">RAG · AI Agents</text>
+  <text x="370" y="72" text-anchor="middle" fill="#5eead4" font-family="system-ui,sans-serif" font-size="11" font-weight="600">NL â†’ SQL</text>
+  <text x="370" y="90" text-anchor="middle" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="9">RAG Â· AI Agents</text>
   <text x="370" y="108" text-anchor="middle" fill="#64748b" font-family="system-ui,sans-serif" font-size="8">OpenAI</text>
   <rect x="328" y="118" width="84" height="20" rx="4" fill="#1e293b"/><text x="370" y="132" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="8">SELECT &</text>
   <path d="M432 96h40" stroke="url(#am-accent)" stroke-width="2"/>

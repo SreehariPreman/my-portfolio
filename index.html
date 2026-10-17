@@ -1,486 +1,156 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lead AI Engineer specializing in production AI systems, multi-agent architectures, RAG applications, and intelligent data platforms. 4.5+ years experience at Travancore Analytics." />
-  <title>Sreehari Preman | Lead AI Engineer</title>
+  <meta name="description" content="Sreehari Preman — Lead AI/ML Engineer. I design and ship multi-agent AI systems, RAG pipelines, and production-grade automation for teams and clients." />
+  <meta property="og:title" content="Sreehari Preman | Lead AI/ML Engineer" />
+  <meta property="og:description" content="Multi-agent AI systems, RAG pipelines, and production automation." />
+  <title>Sreehari Preman | Lead AI/ML Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            display: ['"DM Serif Display"', 'Georgia', 'serif'],
-          },
-          colors: {
-            surface: {
-              DEFAULT: '#0a0f1a',
-              raised: '#111827',
-              border: '#1e293b',
-            },
-            accent: {
-              DEFAULT: '#38bdf8',
-              muted: '#0ea5e9',
-              glow: '#7dd3fc',
-            },
-          },
-        },
-      },
-    }
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body class="bg-surface text-slate-300 font-sans antialiased overflow-x-hidden">
+<body>
 
-  <!-- Background decoration -->
-  <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none" aria-hidden="true">
-    <div class="hero-glow absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] rounded-full bg-accent/10 blur-[120px]"></div>
-    <div class="hero-glow-secondary absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-indigo-500/10 blur-[100px]"></div>
-    <div class="grid-pattern absolute inset-0 opacity-[0.03]"></div>
-  </div>
-
-  <!-- Navigation -->
-  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-    <nav class="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between" aria-label="Main navigation">
-      <a href="#hero" class="text-sm font-semibold tracking-wide text-white hover:text-accent transition-colors" aria-label="Go to top">
-        SP
-      </a>
-      <ul class="hidden sm:flex items-center gap-8 text-sm font-medium text-slate-400">
-        <li><a href="#about" class="nav-link hover:text-white transition-colors">About</a></li>
-        <li><a href="#experience" class="nav-link hover:text-white transition-colors">Experience</a></li>
-        <li><a href="#projects" class="nav-link hover:text-white transition-colors">Projects</a></li>
-        <li><a href="#tech-stack" class="nav-link hover:text-white transition-colors">Tech Stack</a></li>
-        <li><a href="#contact" class="nav-link hover:text-white transition-colors">Contact</a></li>
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#top" class="nav-logo">Sreehari.</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact" class="nav-cta">Get in touch</a></li>
       </ul>
-      <button
-        id="menu-toggle"
-        class="sm:hidden p-2 text-slate-400 hover:text-white transition-colors"
-        aria-label="Toggle menu"
-        aria-expanded="false"
-        aria-controls="mobile-menu"
-      >
-        <svg id="menu-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-        <svg id="menu-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span>
       </button>
-    </nav>
-    <div id="mobile-menu" class="sm:hidden hidden border-t border-surface-border bg-surface/95 backdrop-blur-md">
-      <ul class="max-w-5xl mx-auto px-6 py-4 flex flex-col gap-4 text-sm font-medium text-slate-400">
-        <li><a href="#about" class="mobile-nav-link block py-1 hover:text-white transition-colors">About</a></li>
-        <li><a href="#experience" class="mobile-nav-link block py-1 hover:text-white transition-colors">Experience</a></li>
-        <li><a href="#projects" class="mobile-nav-link block py-1 hover:text-white transition-colors">Projects</a></li>
-        <li><a href="#tech-stack" class="mobile-nav-link block py-1 hover:text-white transition-colors">Tech Stack</a></li>
-        <li><a href="#contact" class="mobile-nav-link block py-1 hover:text-white transition-colors">Contact</a></li>
-      </ul>
     </div>
-  </header>
+  </nav>
 
-  <main>
+  <main id="top">
 
-    <!-- Hero -->
-    <section id="hero" class="min-h-screen flex items-center justify-center px-6 pt-20">
-      <div class="max-w-3xl mx-auto text-center">
-        <h1 class="reveal hero-name font-display text-5xl sm:text-6xl md:text-7xl font-normal tracking-tight mb-4">
-          Sreehari Preman
-        </h1>
-        <p class="reveal reveal-delay-1 text-xl sm:text-2xl font-medium text-slate-400 mb-4">
-          Lead AI Engineer
-        </p>
-        <p class="reveal reveal-delay-2 text-base sm:text-lg text-slate-500 leading-relaxed max-w-2xl mx-auto mb-8">
-          Building production AI systems, agentic applications,<br class="hidden sm:block" />
-          and intelligent data platforms.
-        </p>
-        <div class="reveal reveal-delay-3 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-sm text-slate-500 mb-6">
-          <span class="tag-pill">4.5+ Years Experience</span>
-          <span class="text-surface-border" aria-hidden="true">•</span>
-          <span class="tag-pill">Lead AI Engineer @ Travancore Analytics</span>
-        </div>
-        <div class="reveal reveal-delay-3 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-sm text-slate-500 mb-4">
-          <span class="tag-pill">AI Agents</span>
-          <span class="text-surface-border" aria-hidden="true">•</span>
-          <span class="tag-pill">LLMs</span>
-          <span class="text-surface-border" aria-hidden="true">•</span>
-          <span class="tag-pill">Computer Vision</span>
-          <span class="text-surface-border" aria-hidden="true">•</span>
-          <span class="tag-pill">MLOps</span>
-        </div>
-        <p class="reveal reveal-delay-3 text-sm text-slate-600 mb-12">
-          Based in Kerala, India
-        </p>
-        <div class="reveal reveal-delay-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
-            href="#contact"
-            class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-surface font-semibold text-sm hover:bg-accent-glow transition-all duration-300 hover:shadow-lg hover:shadow-accent/20"
-          >
-            Get in Touch
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
-          <a
-            href="#experience"
-            class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-surface-border text-slate-300 font-medium text-sm hover:border-accent/50 hover:text-white transition-all duration-300"
-          >
-            View Experience
-          </a>
-        </div>
-        <div class="reveal reveal-delay-5 mt-20 animate-bounce-slow" aria-hidden="true">
-          <a href="#about" class="inline-block text-slate-600 hover:text-accent transition-colors">
-            <svg class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="py-24 px-6">
-      <div class="max-w-3xl mx-auto">
-        <div class="reveal section-header mb-12">
-          <span class="text-xs font-semibold tracking-widest uppercase text-accent mb-3 block">About</span>
-          <h2 class="text-3xl sm:text-4xl font-bold text-white">Production AI from concept to deployment</h2>
-        </div>
-        <div class="reveal reveal-delay-1 space-y-5 text-slate-400 leading-relaxed text-base sm:text-lg">
-          <p>
-            Lead AI Engineer with experience designing and delivering AI-powered products across analytics, healthcare, enterprise automation, and conversational AI.
-          </p>
-          <p>
-            I specialize in building production-ready AI systems, multi-agent architectures, RAG applications, and data-driven platforms from concept to deployment.
-          </p>
-          <p>
-            Currently leading AI initiatives, mentoring engineers, and defining technical architecture for enterprise projects.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Experience -->
-    <section id="experience" class="py-24 px-6">
-      <div class="max-w-3xl mx-auto">
-        <div class="reveal section-header mb-14">
-          <span class="text-xs font-semibold tracking-widest uppercase text-accent mb-3 block">Experience</span>
-          <h2 class="text-3xl sm:text-4xl font-bold text-white">Career timeline</h2>
-        </div>
-        <ol class="timeline" aria-label="Work experience">
-
-          <li class="reveal timeline-item">
-            <div class="timeline-marker" aria-hidden="true">
-              <span class="timeline-dot timeline-dot-active"></span>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="reveal">
+            <span class="hero-kicker"><span class="dot"></span> Open to full-time roles &amp; select consulting work</span>
+            <h1>Lead AI/ML Engineer building <em>agentic systems</em> that ship.</h1>
+            <p class="hero-lede">I design and deliver multi-agent platforms, RAG pipelines, and LLM-driven automation — the kind that run in production, not just in demos. Currently leading AI engineering at Travancore Analytics.</p>
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">View my work</a>
+              <a href="#contact" class="btn btn-ghost">Get in touch</a>
+              <a href="https://canva.link/x4ffas84mlaxa3w" target="_blank" rel="noopener" class="btn btn-ghost">Résumé ↗</a>
             </div>
-            <article class="timeline-card">
-              <time class="timeline-date" datetime="2024/Present">2024 — Present</time>
-              <h3 class="timeline-role">Lead AI Engineer</h3>
-              <p class="timeline-company">Travancore Analytics</p>
-              <ul class="timeline-details">
-                <li>Leading AI architecture and product delivery.</li>
-                <li>Designing multi-agent and LLM-powered systems.</li>
-                <li>Mentoring engineers and conducting code reviews.</li>
-                <li>Driving technical decisions and scalability initiatives.</li>
-              </ul>
-            </article>
+          </div>
+          <div class="hero-aside reveal">
+            <div class="hero-meta-row"><span>Based in</span><span>Kochi, Kerala, India</span></div>
+            <div class="hero-meta-row"><span>Role</span><span>Lead AI/ML Engineer</span></div>
+            <div class="hero-meta-row"><span>Focus</span><span>Agentic AI &amp; RAG systems</span></div>
+            <div class="hero-meta-row"><span>Experience</span><span>5+ years</span></div>
+          </div>
+        </div>
+
+        <div class="hero-strip reveal">
+          <div class="hero-stat">
+            <div class="num">5+</div>
+            <div class="label">Years building AI systems</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num">7</div>
+            <div class="label">Production AI platforms shipped</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num">80%</div>
+            <div class="label">Manual effort cut (Genius CodeGen)</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num">95%</div>
+            <div class="label">Reliability on live agentic pipeline</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container about-grid">
+        <div class="reveal">
+          <div class="eyebrow">About</div>
+          <h2>I build AI systems that hold up under real use.</h2>
+          <div class="about-copy" style="margin-top: 28px;">
+            <p>I'm an AI/ML engineer with over 5 years of experience designing intelligent systems — from multi-agent LLM platforms to computer vision pipelines. I currently lead AI engineering at Travancore Analytics, where I own architecture, model integration, and delivery across a portfolio of production AI products.</p>
+            <p>My focus is on systems that survive contact with real users: agentic pipelines that stay reliable at scale, RAG assistants that don't hallucinate their way out of trust, and automation that measurably cuts manual work rather than just looking impressive in a demo. Outside client work, I build and ship personal projects end-to-end — including an algorithmic trading system spanning quant research to live execution.</p>
+          </div>
+        </div>
+        <ul class="about-list reveal">
+          <li>
+            <div class="mark">01</div>
+            <div><h4>Architecture &amp; delivery ownership</h4><p>I lead system design end-to-end — from architecture decisions to production deployment — not just model integration.</p></div>
           </li>
-
-          <li class="reveal reveal-delay-1 timeline-item">
-            <div class="timeline-marker" aria-hidden="true">
-              <span class="timeline-dot"></span>
-            </div>
-            <article class="timeline-card">
-              <time class="timeline-date" datetime="2021/2024">2021 — 2024</time>
-              <h3 class="timeline-role">AI Engineer</h3>
-              <p class="timeline-company">Techxers Technologies</p>
-              <ul class="timeline-details">
-                <li>Built Computer Vision and OCR solutions.</li>
-                <li>Developed face recognition and liveness detection systems.</li>
-                <li>Designed data pipelines and analytics platforms.</li>
-                <li>Delivered AI-powered applications for enterprise clients.</li>
-              </ul>
-            </article>
+          <li>
+            <div class="mark">02</div>
+            <div><h4>Agentic &amp; RAG systems</h4><p>Multi-agent orchestration with LangChain/LangGraph, grounded in retrieval pipelines that stay accurate as knowledge bases grow.</p></div>
           </li>
-
-          <li class="reveal reveal-delay-2 timeline-item timeline-item-last">
-            <div class="timeline-marker" aria-hidden="true">
-              <span class="timeline-dot"></span>
-            </div>
-            <article class="timeline-card">
-              <time class="timeline-date" datetime="2021">2021</time>
-              <h3 class="timeline-role">Big Data &amp; Data Science Intern</h3>
-              <p class="timeline-company">Luminar Technolab</p>
-              <ul class="timeline-details">
-                <li>Worked on Apache Spark and Hadoop ecosystems.</li>
-                <li>Performed large-scale data analysis and EDA.</li>
-              </ul>
-            </article>
+          <li>
+            <div class="mark">03</div>
+            <div><h4>Mentorship &amp; code quality</h4><p>I review code and mentor engineers on LangChain/LangGraph patterns, keeping teams moving without sacrificing reliability.</p></div>
           </li>
-
-        </ol>
+          <li>
+            <div class="mark">04</div>
+            <div><h4>Full-stack when it matters</h4><p>Comfortable owning a project from FastAPI backend to React frontend when a product needs one builder end-to-end.</p></div>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <!-- Featured Projects -->
-    <section id="projects" class="py-24 px-6">
-      <div class="max-w-5xl mx-auto">
-        <div class="reveal section-header mb-14 text-center">
-          <span class="text-xs font-semibold tracking-widest uppercase text-accent mb-3 block">Featured Projects</span>
-          <h2 class="text-3xl sm:text-4xl font-bold text-white">Production AI systems</h2>
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Experience</div>
+          <h2>Where I've built it</h2>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-6 gap-6">
+        <div class="timeline reveal">
 
-          <article class="reveal project-card group xl:col-span-2">
-            <div class="project-card-inner">
-              <div class="project-thumbnail">
-                <img src="assets/featured_projects/01_datalens.svg" alt="DataLens analytics copilot architecture diagram" class="project-thumbnail-img" width="640" height="360" loading="lazy" />
-              </div>
-              <div class="project-card-body">
-                <div class="project-card-header">
-                  <span class="project-index" aria-hidden="true">01</span>
-                  <span class="project-role">Architecture Lead</span>
-                </div>
-                <h3 class="project-title">DataLens</h3>
-                <p class="project-subtitle">AI Analytics Copilot</p>
-                <p class="project-desc">Multi-agent analytical platform that automates EDA, visualization, KPI generation, and business insights through natural language conversations.</p>
-                <ul class="flex flex-wrap gap-2" aria-label="DataLens technologies">
-                  <li class="skill-tag">Python</li>
-                  <li class="skill-tag">FastAPI</li>
-                  <li class="skill-tag">LangGraph</li>
-                  <li class="skill-tag">LangChain</li>
-                  <li class="skill-tag">React</li>
-                </ul>
-              </div>
-            </div>
-          </article>
-
-          <article class="reveal reveal-delay-1 project-card group xl:col-span-2">
-            <div class="project-card-inner">
-              <div class="project-thumbnail">
-                <img src="assets/featured_projects/02_codegen.svg" alt="CodeGen clinical analytics code generation diagram" class="project-thumbnail-img" width="640" height="360" loading="lazy" />
-              </div>
-              <div class="project-card-body">
-                <div class="project-card-header">
-                  <span class="project-index" aria-hidden="true">02</span>
-                  <span class="project-role">AI Developer</span>
-                </div>
-                <h3 class="project-title">CodeGen</h3>
-                <p class="project-subtitle">Clinical Analytics Code Generation System</p>
-                <p class="project-desc">Agentic platform that automatically generates SAS and R programs from metadata definitions, reducing manual coding effort by 80%.</p>
-                <ul class="flex flex-wrap gap-2" aria-label="CodeGen technologies">
-                  <li class="skill-tag">Python</li>
-                  <li class="skill-tag">Azure</li>
-                  <li class="skill-tag">OpenAI</li>
-                  <li class="skill-tag">LangGraph</li>
-                </ul>
-              </div>
-            </div>
-          </article>
-
-          <article class="reveal reveal-delay-2 project-card group xl:col-span-2">
-            <div class="project-card-inner">
-              <div class="project-thumbnail">
-                <img src="assets/featured_projects/03_askme.svg" alt="AskMe SQL intelligence platform diagram" class="project-thumbnail-img" width="640" height="360" loading="lazy" />
-              </div>
-              <div class="project-card-body">
-                <div class="project-card-header">
-                  <span class="project-index" aria-hidden="true">03</span>
-                  <span class="project-role">AI Lead</span>
-                </div>
-                <h3 class="project-title">AskMe</h3>
-                <p class="project-subtitle">SQL Intelligence Platform</p>
-                <p class="project-desc">Natural language analytics platform that converts business questions into SQL and generates automated insights using AI agents and RAG.</p>
-                <ul class="flex flex-wrap gap-2" aria-label="AskMe technologies">
-                  <li class="skill-tag">Python</li>
-                  <li class="skill-tag">OpenAI</li>
-                  <li class="skill-tag">Redshift</li>
-                  <li class="skill-tag">Superset</li>
-                </ul>
-              </div>
-            </div>
-          </article>
-
-          <article class="reveal project-card group xl:col-span-2 xl:col-start-2">
-            <div class="project-card-inner">
-              <div class="project-thumbnail">
-                <img src="assets/featured_projects/04_tradepilot.svg" alt="TradePilot multi-agent trading intelligence diagram" class="project-thumbnail-img" width="640" height="360" loading="lazy" />
-              </div>
-              <div class="project-card-body">
-                <div class="project-card-header">
-                  <span class="project-index" aria-hidden="true">04</span>
-                  <span class="project-role">Founder &amp; Architect</span>
-                </div>
-                <h3 class="project-title">TradePilot</h3>
-                <p class="project-subtitle">Multi-Agent Trading Intelligence Platform</p>
-                <p class="project-desc">AI-powered trading platform using quantitative analysis, market intelligence agents, and automated workflows.</p>
-                <ul class="flex flex-wrap gap-2" aria-label="TradePilot technologies">
-                  <li class="skill-tag">Python</li>
-                  <li class="skill-tag">FastAPI</li>
-                  <li class="skill-tag">PostgreSQL</li>
-                  <li class="skill-tag">Agents</li>
-                </ul>
-              </div>
-            </div>
-          </article>
-
-          <article class="reveal reveal-delay-1 project-card group xl:col-span-2 xl:col-start-4">
-            <div class="project-card-inner">
-              <div class="project-thumbnail">
-                <img src="assets/featured_projects/05_jarvis_os.svg" alt="JARVIS OS personal AI operating system diagram" class="project-thumbnail-img" width="640" height="360" loading="lazy" />
-              </div>
-              <div class="project-card-body">
-                <div class="project-card-header">
-                  <span class="project-index" aria-hidden="true">05</span>
-                  <span class="project-role">Founder &amp; Architect</span>
-                </div>
-                <h3 class="project-title">JARVIS OS</h3>
-                <p class="project-subtitle">Personal AI Operating System</p>
-                <p class="project-desc">Memory-driven AI assistant with long-term context, RAG, multi-agent orchestration, and knowledge retrieval.</p>
-                <ul class="flex flex-wrap gap-2" aria-label="JARVIS OS technologies">
-                  <li class="skill-tag">LangGraph</li>
-                  <li class="skill-tag">OpenAI</li>
-                  <li class="skill-tag">Chroma</li>
-                  <li class="skill-tag">FastAPI</li>
-                </ul>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Tech Stack -->
-    <section id="tech-stack" class="py-24 px-6">
-      <div class="max-w-5xl mx-auto">
-        <div class="reveal section-header mb-14 text-center">
-          <span class="text-xs font-semibold tracking-widest uppercase text-accent mb-3 block">Tech Stack</span>
-          <h2 class="text-3xl sm:text-4xl font-bold text-white">Tools &amp; Technologies</h2>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-
-          <div class="reveal tech-card group">
-            <div class="tech-card-inner">
-              <div class="flex items-center gap-3 mb-5">
-                <div class="tech-icon bg-violet-500/10 text-violet-400">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <h3 class="text-base font-semibold text-white">Artificial Intelligence</h3>
-              </div>
-              <ul class="flex flex-wrap gap-2">
-                <li class="skill-tag">Machine Learning</li>
-                <li class="skill-tag">Deep Learning</li>
-                <li class="skill-tag">Computer Vision</li>
-                <li class="skill-tag">NLP</li>
-                <li class="skill-tag">LLMs</li>
-                <li class="skill-tag">RAG</li>
-                <li class="skill-tag">AI Agents</li>
+          <div class="timeline-item">
+            <div class="timeline-date">Apr 2024 — Present<br><span class="current">Current</span></div>
+            <div>
+              <div class="timeline-role">Lead AI/ML Engineer</div>
+              <div class="timeline-org">Travancore Analytics</div>
+              <ul class="timeline-body">
+                <li>Lead architecture and delivery across 5+ production AI platforms, including a multi-agent analytics assistant, an NL-to-SQL agentic system, and a metadata-driven code generator for clinical trials.</li>
+                <li>Architected and shipped an agentic SQL query platform achieving 95% production reliability, integrating RAG over a vector database for grounded insight generation.</li>
+                <li>Built a metadata-to-code generation pipeline (SAS/R) that cut biostatisticians' manual coding effort by 80%.</li>
+                <li>Lead code reviews and mentor engineers on LangChain/LangGraph integration; own architectural documentation and feature roadmaps.</li>
               </ul>
             </div>
           </div>
 
-          <div class="reveal reveal-delay-1 tech-card group">
-            <div class="tech-card-inner">
-              <div class="flex items-center gap-3 mb-5">
-                <div class="tech-icon bg-emerald-500/10 text-emerald-400">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" />
-                  </svg>
-                </div>
-                <h3 class="text-base font-semibold text-white">Backend</h3>
-              </div>
-              <ul class="flex flex-wrap gap-2">
-                <li class="skill-tag">Python</li>
-                <li class="skill-tag">FastAPI</li>
-                <li class="skill-tag">Flask</li>
-                <li class="skill-tag">Django</li>
-                <li class="skill-tag">REST APIs</li>
-                <li class="skill-tag">PostgreSQL</li>
-                <li class="skill-tag">MySQL</li>
-                <li class="skill-tag">MongoDB</li>
+          <div class="timeline-item">
+            <div class="timeline-date">Dec 2021 — Apr 2024</div>
+            <div>
+              <div class="timeline-role">AI/ML Engineer</div>
+              <div class="timeline-org">Techxers Technologies Pvt Ltd</div>
+              <ul class="timeline-body">
+                <li>Built deep learning document readers (OpenCV + YOLO + Tesseract) and face recognition/liveness detection systems for secure web-based attendance.</li>
+                <li>Led migration of a production data pipeline from MongoDB to PostgreSQL, improving scalability and analytics performance.</li>
+                <li>Optimized ETL processes and SQL queries, reducing processing time by 10%, and shipped interactive dashboards (Tableau, Metabase, Superset) into a Flask web application.</li>
               </ul>
             </div>
           </div>
 
-          <div class="reveal reveal-delay-2 tech-card group">
-            <div class="tech-card-inner">
-              <div class="flex items-center gap-3 mb-5">
-                <div class="tech-icon bg-sky-500/10 text-sky-400">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                  </svg>
-                </div>
-                <h3 class="text-base font-semibold text-white">Frontend</h3>
-              </div>
-              <ul class="flex flex-wrap gap-2">
-                <li class="skill-tag">React</li>
-                <li class="skill-tag">Next.js</li>
-                <li class="skill-tag">JavaScript</li>
-                <li class="skill-tag">TypeScript</li>
-                <li class="skill-tag">HTML</li>
-                <li class="skill-tag">CSS</li>
-                <li class="skill-tag">Tailwind CSS</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="reveal reveal-delay-1 tech-card group">
-            <div class="tech-card-inner">
-              <div class="flex items-center gap-3 mb-5">
-                <div class="tech-icon bg-amber-500/10 text-amber-400">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                  </svg>
-                </div>
-                <h3 class="text-base font-semibold text-white">Data &amp; Analytics</h3>
-              </div>
-              <ul class="flex flex-wrap gap-2">
-                <li class="skill-tag">Airbyte</li>
-                <li class="skill-tag">DBT</li>
-                <li class="skill-tag">Tableau</li>
-                <li class="skill-tag">Apache Superset</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="reveal reveal-delay-2 tech-card group">
-            <div class="tech-card-inner">
-              <div class="flex items-center gap-3 mb-5">
-                <div class="tech-icon bg-teal-500/10 text-teal-400">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
-                  </svg>
-                </div>
-                <h3 class="text-base font-semibold text-white">Hardware &amp; Robotics</h3>
-              </div>
-              <ul class="flex flex-wrap gap-2">
-                <li class="skill-tag">Robotics Development</li>
-                <li class="skill-tag">3D Printing</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="reveal reveal-delay-1 tech-card group">
-            <div class="tech-card-inner">
-              <div class="flex items-center gap-3 mb-5">
-                <div class="tech-icon bg-rose-500/10 text-rose-400">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <h3 class="text-base font-semibold text-white">Tools</h3>
-              </div>
-              <ul class="flex flex-wrap gap-2">
-                <li class="skill-tag">Git</li>
-                <li class="skill-tag">Docker</li>
-                <li class="skill-tag">Linux</li>
+          <div class="timeline-item">
+            <div class="timeline-date">Mar 2021 — Dec 2021</div>
+            <div>
+              <div class="timeline-role">Data Science &amp; Big Data Analytics Intern</div>
+              <div class="timeline-org">Luminar Technolab</div>
+              <ul class="timeline-body">
+                <li>Processed and analyzed large datasets with Apache Spark/Hadoop; applied classical ML and deep learning (CNN, YOLO) to computer vision problems.</li>
+                <li>Built face detection/recognition models with OpenCV and delivered exploratory data analysis and visualization work.</li>
               </ul>
             </div>
           </div>
@@ -489,90 +159,181 @@
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="py-24 px-6">
-      <div class="max-w-3xl mx-auto text-center">
-        <div class="reveal section-header mb-12">
-          <span class="text-xs font-semibold tracking-widest uppercase text-accent mb-3 block">Contact</span>
-          <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Let's connect</h2>
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Selected work</div>
+          <h2>Systems I've designed and shipped</h2>
+          <p>A mix of production platforms built at Travancore Analytics and personal systems built end-to-end, solo.</p>
         </div>
-        <div class="reveal reveal-delay-1 flex flex-col sm:flex-row items-center justify-center gap-5 mb-10">
-          <a
-            href="mailto:sreeharipreman853@gmail.com"
-            class="contact-card group w-full sm:w-auto"
-            aria-label="Send email to sreeharipreman853@gmail.com"
-          >
-            <span class="contact-icon" aria-hidden="true">📧</span>
-            <span class="text-left">
-              <span class="block text-xs text-slate-500 mb-0.5">Email</span>
-              <span class="block text-sm font-medium text-white group-hover:text-accent transition-colors">sreeharipreman853@gmail.com</span>
-            </span>
-          </a>
-          <div class="contact-card w-full sm:w-auto">
-            <span class="contact-icon" aria-hidden="true">📍</span>
-            <span class="text-left">
-              <span class="block text-xs text-slate-500 mb-0.5">Location</span>
-              <span class="block text-sm font-medium text-white">Kochi, Kerala, India</span>
-            </span>
+
+        <!-- Feature 1: DataLens -->
+        <div class="project-feature reveal">
+          <div class="project-feature-media"><img src="assets/featured_projects/01_datalens.svg" alt="DataLens architecture illustration" /></div>
+          <div class="project-feature-body">
+            <span class="project-tag">Team Lead · Travancore Analytics</span>
+            <h3>DataLens — conversational analytics assistant</h3>
+            <p>A multi-agent platform that automates exploratory data analysis, visualization, and insight generation through natural language. Agents handle ingestion, processing, and visualization end-to-end, surfaced through a conversational interface and a live KPI dashboard.</p>
+            <div class="project-metric">Multi-agent architecture · in active development</div>
+            <div class="tech-pills">
+              <span class="tech-pill">Python</span><span class="tech-pill">FastAPI</span><span class="tech-pill">LangChain</span><span class="tech-pill">LangGraph</span><span class="tech-pill">Groq</span><span class="tech-pill">React</span>
+            </div>
           </div>
         </div>
-        <div class="reveal reveal-delay-2">
-          <span class="text-xs font-semibold tracking-widest uppercase text-accent mb-5 block">Social Links</span>
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="https://github.com/SreehariPreman"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="social-link group"
-              aria-label="Visit GitHub profile"
-            >
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
-              </svg>
-              <span>GitHub</span>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/sreehari-k-/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="social-link group"
-              aria-label="Visit LinkedIn profile"
-            >
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-              </svg>
-              <span>LinkedIn</span>
-            </a>
+
+        <!-- Feature 2: Trading systems (personal) -->
+        <div class="project-feature reveal">
+          <div class="project-feature-media"><img src="assets/featured_projects/04_tradepilot.svg" alt="Algorithmic trading system illustration" /></div>
+          <div class="project-feature-body">
+            <span class="project-tag">Personal project · Solo build</span>
+            <h3>Algorithmic trading system — research to live execution</h3>
+            <p>An end-to-end trading system combining a LangGraph multi-agent pipeline (news research → strategy planning → risk validation) with a quant screening engine (market regime detection → tradeability screening → factor/setup ranking). Integrated with Zerodha Kite for live Indian market data and order flow.</p>
+            <div class="project-metric">Full stack: strategy engine + live broker integration</div>
+            <div class="tech-pills">
+              <span class="tech-pill">Python</span><span class="tech-pill">FastAPI</span><span class="tech-pill">Next.js</span><span class="tech-pill">LangGraph</span><span class="tech-pill">PostgreSQL</span><span class="tech-pill">Celery</span><span class="tech-pill">KiteConnect</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 3: Genius CodeGen -->
+        <div class="project-feature reveal">
+          <div class="project-feature-media"><img src="assets/featured_projects/02_codegen.svg" alt="Genius CodeGen illustration" /></div>
+          <div class="project-feature-body">
+            <span class="project-tag">AI Developer · Travancore Analytics</span>
+            <h3>Genius CodeGen — clinical code generation</h3>
+            <p>A metadata-driven agentic system that transforms structured metadata (shell JSON, table definitions, variable specs) into production-quality SAS and R scripts for clinical TFL and CSR tables, using an example-driven prompt learning framework to enforce structure and consistency.</p>
+            <div class="project-metric">80% reduction in manual coding effort</div>
+            <div class="tech-pills">
+              <span class="tech-pill">Python</span><span class="tech-pill">LangChain</span><span class="tech-pill">LangGraph</span><span class="tech-pill">Azure</span><span class="tech-pill">OpenAI API</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-grid">
+          <div class="project-card reveal">
+            <span class="project-tag">AI Lead</span>
+            <h4>AskMe — NL-to-SQL agentic analytics</h4>
+            <p>Natural language to SQL conversion with real-time insight retrieval, backed by RAG over a Chroma vector database for grounded, context-aware analysis of Superset dashboards.</p>
+            <div class="tech-pills"><span class="tech-pill">LangGraph</span><span class="tech-pill">Redshift</span><span class="tech-pill">Chroma</span></div>
+          </div>
+          <div class="project-card reveal">
+            <span class="project-tag">AI Lead</span>
+            <h4>WhatsApp RAG support bot</h4>
+            <p>Retrieval-augmented WhatsApp assistant for 24/7 customer support, grounded in a document-powered, continuously expandable knowledge base.</p>
+            <div class="tech-pills"><span class="tech-pill">Python</span><span class="tech-pill">Ollama</span><span class="tech-pill">Llama 3</span></div>
+          </div>
+          <div class="project-card reveal">
+            <span class="project-tag">AI Lead</span>
+            <h4>AI report generator for coaching platforms</h4>
+            <p>One-click, AI-generated assessment reports for coaching professionals, with editable output so coaches retain full control over accuracy and client-specific framing.</p>
+            <div class="tech-pills"><span class="tech-pill">Node</span><span class="tech-pill">PostgreSQL</span><span class="tech-pill">OpenAI API</span></div>
+          </div>
+          <div class="project-card reveal">
+            <span class="project-tag">Personal project</span>
+            <h4>FinTrack — automated expense tracking</h4>
+            <p>Parses UPI transaction emails directly from an inbox (IMAP) into structured, categorized spending data — no manual entry required.</p>
+            <div class="tech-pills"><span class="tech-pill">Python</span><span class="tech-pill">Flask</span><span class="tech-pill">SQLite</span></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Call to Action -->
-    <section id="cta" class="px-6 pb-24">
-      <div class="reveal max-w-3xl mx-auto text-center cta-box">
-        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">Interested in working together?</h2>
-        <p class="text-slate-400 text-base sm:text-lg mb-8 max-w-xl mx-auto">
-          Let's discuss AI systems, multi-agent architectures, or product development.
-        </p>
-        <a
-          href="mailto:sreeharipreman853@gmail.com"
-          class="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-accent text-surface font-semibold text-sm hover:bg-accent-glow transition-all duration-300 hover:shadow-lg hover:shadow-accent/20"
-        >
-          Get In Touch
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-          </svg>
-        </a>
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Skills</div>
+          <h2>Tools I build with</h2>
+        </div>
+        <div class="skills-grid reveal">
+          <div class="skill-group">
+            <h4>AI / ML / Generative AI</h4>
+            <div class="skill-tags">
+              <span>LangChain</span><span>LangGraph</span><span>CrewAI</span><span>OpenAI API</span><span>Groq</span><span>Ollama</span><span>RAG</span><span>Prompt Engineering</span><span>TensorFlow</span><span>PyTorch</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4>Cloud &amp; Infra</h4>
+            <div class="skill-tags">
+              <span>AWS Bedrock</span><span>AWS Sagemaker</span><span>AWS Kendra</span><span>Azure</span><span>Celery</span><span>Docker</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4>Computer Vision</h4>
+            <div class="skill-tags">
+              <span>OpenCV</span><span>YOLO</span><span>OCR / Tesseract</span><span>MediaPipe</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4>Data &amp; Backend</h4>
+            <div class="skill-tags">
+              <span>Python</span><span>JavaScript / TypeScript</span><span>FastAPI</span><span>Flask</span><span>Django</span><span>PostgreSQL</span><span>Redshift</span><span>Apache Spark</span><span>dbt</span><span>Vector DBs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREDENTIALS -->
+    <section id="credentials">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Background</div>
+          <h2>Education &amp; recognition</h2>
+        </div>
+        <div class="credentials-grid reveal">
+          <div class="credential-card">
+            <div class="cred-label">Education</div>
+            <ul>
+              <li><strong>B.Tech, Mechatronics Engineering</strong><br>Nehru College of Engineering &amp; Research Centre, 2016–2020</li>
+            </ul>
+          </div>
+          <div class="credential-card">
+            <div class="cred-label">Awards</div>
+            <ul>
+              <li><strong>1st Prize, Robo War</strong> — NIT Calicut &amp; ATDU Kerala, 2018</li>
+              <li><strong>2nd Prize, Robo War</strong> — IIT Palakkad, 2019</li>
+            </ul>
+          </div>
+          <div class="credential-card">
+            <div class="cred-label">Other</div>
+            <ul>
+              <li><strong>Industrial Automation</strong> — Bosch, 2019</li>
+              <li><strong>Cyberdome Volunteer</strong> — Kerala Police, 2018</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-wrap reveal">
+          <div>
+            <h2>Let's build something that ships.</h2>
+            <p>Open to full-time Lead/Senior AI engineering roles, and select consulting work — agentic systems, RAG pipelines, and LLM-driven automation.</p>
+            <div class="hero-actions" style="margin-top:32px;">
+              <a href="mailto:sreeharipreman853@gmail.com" class="btn btn-primary">Email me</a>
+            </div>
+          </div>
+          <div class="contact-links">
+            <a href="mailto:sreeharipreman853@gmail.com" class="contact-link"><span>Email</span><span>sreeharipreman853@gmail.com</span></a>
+            <a href="https://www.linkedin.com/in/sreehari-k-/" target="_blank" rel="noopener" class="contact-link"><span>LinkedIn</span><span>sreehari-k-</span></a>
+            <a href="https://github.com/SreehariPreman" target="_blank" rel="noopener" class="contact-link"><span>GitHub</span><span>SreehariPreman</span></a>
+            <a href="#top" class="contact-link"><span>Location</span><span>Kochi, India</span></a>
+          </div>
+        </div>
       </div>
     </section>
 
   </main>
 
-  <footer class="border-t border-surface-border py-8 px-6">
-    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-600">
-      <p>&copy; <span id="year"></span> Sreehari Preman. All rights reserved.</p>
-      <p class="text-xs">Lead AI Engineer</p>
+  <footer>
+    <div class="container footer">
+      <span>© <span id="year"></span> Sreehari Preman</span>
+      <span><a href="mailto:sreeharipreman853@gmail.com">sreeharipreman853@gmail.com</a></span>
     </div>
   </footer>
 

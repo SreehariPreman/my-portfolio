@@ -1,119 +1,39 @@
-const navbar = document.getElementById('navbar')
-const menuToggle = document.getElementById('menu-toggle')
-const mobileMenu = document.getElementById('mobile-menu')
-const menuIconOpen = document.getElementById('menu-icon-open')
-const menuIconClose = document.getElementById('menu-icon-close')
-const yearEl = document.getElementById('year')
+document.getElementById('year').textContent = new Date().getFullYear();
 
-const sections = ['about', 'experience', 'projects', 'tech-stack', 'contact']
-const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link')
+// Nav shadow on scroll
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('is-scrolled', window.scrollY > 8);
+}, { passive: true });
 
-/* Current year in footer */
-if (yearEl) {
-  yearEl.textContent = new Date().getFullYear()
-}
+// Mobile nav toggle
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', () => navLinks.classList.toggle('is-open'));
+navLinks.querySelectorAll('a').forEach(link =>
+  link.addEventListener('click', () => navLinks.classList.remove('is-open'))
+);
 
-/* Navbar scroll effect */
-const handleScroll = () => {
-  if (!navbar) return
-  navbar.classList.toggle('scrolled', window.scrollY > 40)
-}
+// Scroll-spy active link
+const sections = document.querySelectorAll('main section[id]');
+const navAnchors = navLinks.querySelectorAll('a[href^="#"]');
+const spyObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+    navAnchors.forEach((a) => {
+      a.classList.toggle('is-active', a.getAttribute('href') === `#${entry.target.id}`);
+    });
+  });
+}, { rootMargin: '-45% 0px -50% 0px' });
+sections.forEach((s) => spyObserver.observe(s));
 
-window.addEventListener('scroll', handleScroll, { passive: true })
-handleScroll()
-
-/* Mobile menu toggle */
-const handleMenuToggle = () => {
-  if (!mobileMenu || !menuToggle) return
-
-  const isOpen = !mobileMenu.classList.contains('hidden')
-  mobileMenu.classList.toggle('hidden')
-  menuIconOpen?.classList.toggle('hidden', !isOpen)
-  menuIconClose?.classList.toggle('hidden', isOpen)
-  menuToggle.setAttribute('aria-expanded', String(!isOpen))
-}
-
-menuToggle?.addEventListener('click', handleMenuToggle)
-
-/* Close mobile menu on link click */
-document.querySelectorAll('.mobile-nav-link').forEach((link) => {
-  link.addEventListener('click', () => {
-    mobileMenu?.classList.add('hidden')
-    menuIconOpen?.classList.remove('hidden')
-    menuIconClose?.classList.add('hidden')
-    menuToggle?.setAttribute('aria-expanded', 'false')
-  })
-})
-
-/* Hero entrance animation on load */
-const animateHero = () => {
-  const heroElements = document.querySelectorAll('#hero .reveal')
-  heroElements.forEach((el, index) => {
-    setTimeout(() => {
-      el.classList.add('hero-visible')
-    }, index * 120)
-  })
-}
-
-window.addEventListener('load', animateHero)
-
-/* Intersection Observer for scroll reveals */
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible')
-        revealObserver.unobserve(entry.target)
-      }
-    })
-  },
-  { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
-)
-
-document.querySelectorAll('.reveal').forEach((el) => {
-  if (!el.closest('#hero')) {
-    revealObserver.observe(el)
-  }
-})
-
-/* Active section highlight in nav */
-const sectionObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return
-
-      const id = entry.target.id
-      navLinks.forEach((link) => {
-        const href = link.getAttribute('href')
-        link.classList.toggle('active', href === `#${id}`)
-      })
-    })
-  },
-  { threshold: 0.4, rootMargin: '-20% 0px -55% 0px' }
-)
-
-sections.forEach((id) => {
-  const section = document.getElementById(id)
-  if (section) sectionObserver.observe(section)
-})
-
-/* Stagger skill tags on card hover */
-document.querySelectorAll('.tech-card, .project-card').forEach((card) => {
-  const tags = card.querySelectorAll('.skill-tag')
-
-  card.addEventListener('mouseenter', () => {
-    tags.forEach((tag, i) => {
-      tag.style.transitionDelay = `${i * 30}ms`
-      tag.style.color = '#e2e8f0'
-      tag.style.borderColor = 'rgba(56, 189, 248, 0.25)'
-    })
-  })
-
-  card.addEventListener('mouseleave', () => {
-    tags.forEach((tag) => {
-      tag.style.transitionDelay = '0ms'
-      tag.style.color = ''
-      tag.style.borderColor = ''
-    })
-  })
-})
+// Reveal-on-scroll
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
