@@ -113,15 +113,8 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height
   background: var(--accent);
   border-radius: 2px;
 }
-.nav-cta {
-  padding: 9px 18px;
-  background: var(--ink);
-  color: var(--paper);
-  border-radius: 999px;
-  font-size: 14px;
-  font-weight: 600;
-}
-.nav-cta:hover { background: var(--accent); }
+.nav-cta { color: var(--ink); }
+.nav-cta:hover { color: var(--accent); }
 .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
 .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--ink); margin: 4px 0; border-radius: 2px; }
 
@@ -308,10 +301,10 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height
   min-height: 280px;
 }
 .project-feature-media img { width: 100%; height: auto; }
-.project-feature-body { padding: 44px 44px 44px 0; display: flex; flex-direction: column; justify-content: center; }
-.project-feature:nth-child(even) { direction: rtl; }
-.project-feature:nth-child(even) > * { direction: ltr; }
-.project-feature:nth-child(even) .project-feature-body { padding: 44px 0 44px 44px; }
+.project-feature-media { order: 1; }
+.project-feature-body { padding: 44px; display: flex; flex-direction: column; justify-content: center; order: 2; }
+.project-feature:nth-child(even) .project-feature-media { order: 2; }
+.project-feature:nth-child(even) .project-feature-body { order: 1; }
 .project-tag {
   display: inline-block;
   font-size: 12.5px;
@@ -444,8 +437,9 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height
   .hero-stat:nth-child(2) { border-right: none; }
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
   .timeline-item { grid-template-columns: 1fr; gap: 10px; }
-  .project-feature, .project-feature:nth-child(even) { grid-template-columns: 1fr; direction: ltr; }
-  .project-feature-body, .project-feature:nth-child(even) .project-feature-body { padding: 32px; }
+  .project-feature { grid-template-columns: 1fr; }
+  .project-feature-media, .project-feature:nth-child(even) .project-feature-media { order: 1; }
+  .project-feature-body, .project-feature:nth-child(even) .project-feature-body { order: 2; padding: 32px; }
   .project-grid { grid-template-columns: 1fr; }
   .skills-grid, .credentials-grid { grid-template-columns: 1fr; }
   .contact-wrap { grid-template-columns: 1fr; padding: 40px 28px; }
