@@ -5,8 +5,7 @@ Single-page portfolio for **Sreehari Preman** — Lead AI Engineer.
 ## Stack
 
 - HTML, CSS, JavaScript
-- [Tailwind CSS](https://tailwindcss.com/) (CDN)
-- Scroll reveal and hover animations
+- Fraunces + Instrument Sans (Google Fonts), plain CSS
 - No build step, backend, or database required
 
 ## Project structure
