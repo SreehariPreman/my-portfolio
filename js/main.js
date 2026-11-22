@@ -1,39 +1,32 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Nav shadow on scroll
 const nav = document.getElementById('nav');
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+
+// Nav underline once the page scrolls
 window.addEventListener('scroll', () => {
   nav.classList.toggle('is-scrolled', window.scrollY > 8);
 }, { passive: true });
 
-// Mobile nav toggle
-const navToggle = document.getElementById('navToggle');
-const navLinks = document.getElementById('navLinks');
-navToggle.addEventListener('click', () => navLinks.classList.toggle('is-open'));
-navLinks.querySelectorAll('a').forEach(link =>
-  link.addEventListener('click', () => navLinks.classList.remove('is-open'))
+// Mobile menu
+navToggle.addEventListener('click', () => {
+  const open = navLinks.classList.toggle('is-open');
+  navToggle.setAttribute('aria-expanded', String(open));
+});
+navLinks.querySelectorAll('a').forEach((a) =>
+  a.addEventListener('click', () => {
+    navLinks.classList.remove('is-open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  })
 );
 
-// Scroll-spy active link
-const sections = document.querySelectorAll('main section[id]');
-const navAnchors = navLinks.querySelectorAll('a[href^="#"]');
-const spyObserver = new IntersectionObserver((entries) => {
+// Mark the current section in the nav
+const anchors = [...navLinks.querySelectorAll('a[href^="#"]:not(.nav-cta)')];
+const spy = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (!entry.isIntersecting) return;
-    navAnchors.forEach((a) => {
-      a.classList.toggle('is-active', a.getAttribute('href') === `#${entry.target.id}`);
-    });
+    anchors.forEach((a) => a.classList.toggle('is-active', a.getAttribute('href') === `#${entry.target.id}`));
   });
 }, { rootMargin: '-45% 0px -50% 0px' });
-sections.forEach((s) => spyObserver.observe(s));
-
-// Reveal-on-scroll
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('is-visible');
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12 });
-document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+document.querySelectorAll('main section[id]').forEach((s) => spy.observe(s));
